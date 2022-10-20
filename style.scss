@@ -1,0 +1,158 @@
+/* Theme Name: Template 6
+Text Domain: Template 6
+Version: 1.6
+Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Tags: blog, one-column, custom-background, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, block-patterns, block-styles, wide-blocks, accessibility-ready
+Author: iPhiTech IT Digital Solutions Corporation
+Author URI: iPhiTech IT Digital Solutions Corporation
+*/
+
+// Importing Playfair Display instead of Georgia as Georgia is not a free font
+// However Playfair will serve as a fallback to Georgia
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+$font-family : 'Georgia', 'Playfair Display', serif;
+
+// Color Pallete
+$primary-color   : #C49106;
+$secondary-color : #E4BD53;
+
+// Media Query
+$media_desktop      : "only screen and (max-width: 1200px)";
+$media_tablet       : "only screen and (max-width: 1024px)";
+$media_tablet_xs    : "only screen and (min-width: 991px)";
+$media_mobile       : "only screen and (max-width: 767px)";
+$media_mobile_sm    : "only screen and (max-width: 425px)";
+$media_mobile_xs    : "only screen and (max-width: 375px)";
+
+body {
+    font-family: $font-family;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: $primary-color;
+    display: flex;
+    flex-direction: row;
+    color: white;
+    padding: 0 4rem;
+
+    & nav {
+        display: inherit;
+        align-items: center;
+        width: 100%;
+
+        & > * {
+            width: 100%;
+        }
+        
+        & .left-nav { 
+            flex-basis: 20%;
+        }
+
+        & .right-nav { 
+            display: flex;
+            flex-direction: row;
+            justify-content: right;
+            align-items: center;
+
+            flex-basis: 80%;
+
+            @media #{ $media_mobile } {
+                flex-basis: 50%;
+            }
+        }
+
+        & img {
+            height: auto;
+            width: 85px;
+        }
+    }
+
+    & ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+        column-gap: 33px;
+        row-gap: 10px;
+        margin: 0;
+
+        // Fixing the bootstrap issue in >990px screen
+        @media only screen and (max-width: 990px) {
+            flex-direction: column;
+            justify-content: left;
+        }
+
+        @media #{ $media_mobile } {
+            flex-direction: column;
+            justify-content: left;
+        }
+    }
+
+    & li {
+        display: inline-flex;
+        list-style-type: none;
+        
+        border-top: 1px solid transparent;
+        border-bottom: 1px solid transparent;
+        
+        &.current_page_item, &:hover {
+            border-color: white;
+
+            @media #{ $media_tablet } {
+                border-color: $secondary-color;
+            }
+
+        }
+
+    }
+    
+    & .navbar-toggler {
+        @media #{ $media_tablet_xs } {
+            display: none;
+        }
+    }
+
+    & button {
+        background-color: white !important;
+        border: none !important;
+        padding: 1rem !important;
+        color: $primary-color !important;
+
+        @media #{ $media_tablet } {
+            display: block;
+        }
+    
+        @media #{ $media_tablet_xs } {
+            display: none;
+        }
+    }
+
+    & .offcanvas-title {
+        color: $primary-color;
+    }
+
+    & a {
+        text-decoration: none;
+        padding: 0.1rem 0;
+        color: white;
+        
+        &:hover {
+            color: inherit;
+
+            @media #{ $media_tablet } {
+                color: $primary-color;
+            }
+        }
+
+        @media #{ $media_tablet } {
+            color: $primary-color;
+        }
+    }
+
+    @media #{ $media_mobile } {
+        padding: 0 1rem;
+    }
+
+}
