@@ -558,4 +558,111 @@ footer .copyright p {
 }
 .site-content-search article:hover a {
   color: inherit;
+}
+
+.container {
+  padding: 1rem;
+}
+.container .media {
+  border: 2px solid black;
+  border-radius: 12px;
+  color: black;
+}
+.container .media .media-content {
+  margin: 1.5em;
+}
+.container .media .media-content .read-more {
+  background-color: #C49106;
+  padding: 0.7rem 1rem;
+  color: white;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-top: 1rem;
+  border-radius: 12px;
+}
+.container .media a {
+  text-decoration: none;
+  color: inherit;
+}
+.container .media:hover {
+  border-color: #C49106;
+  color: #C49106;
+}
+@media only screen and (max-width: 767px) {
+  .container {
+    padding: 0;
+  }
+}
+
+.single-page {
+  background-color: #C49106;
+  padding: 5rem 0;
+  color: black;
+}
+.single-page header {
+  background-color: initial;
+  color: inherit;
+  padding: 0;
+}
+.single-page a {
+  text-decoration: none;
+  color: #C49106;
+}
+.single-page article {
+  background-color: white;
+  width: 80%;
+  margin: auto;
+  padding: 2rem;
+  border-radius: 12px;
+}
+.single-page article img {
+  width: 100%;
+}
+@media only screen and (max-width: 1024px) {
+  .single-page article {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0;
+  }
+}
+.single-page .comments h2, .single-page .lreply {
+  color: #C49106;
+  font-size: 1.5rem;
+}
+.single-page .comment-form-comment {
+  display: flex;
+  flex-direction: column;
+}
+.single-page .comment-form-comment > textarea {
+  margin-top: 1rem;
+  padding: 1rem;
+  resize: none;
+}
+.single-page .content .form-submit > .submit {
+  background-color: #C49106;
+  border: 2px solid transparent;
+  padding: 1rem 1rem;
+  color: white;
+  font-weight: 700;
+}
+.single-page .content .form-submit > .submit:hover {
+  background-color: white;
+  border-color: #C49106;
+  color: #C49106;
+}
+.single-page .comments-inner .byuser {
+  width: 100%;
+}
+.single-page .comments-inner .byuser > .comment-author {
+  width: 100%;
+}
+.single-page .comments-inner .byuser + .byuser {
+  border-top: 2px solid #C49106;
+  margin-top: 1rem;
+  padding-top: 1rem;
+}
+.single-page .comments-inner img {
+  max-height: 4rem;
+  max-width: 4rem;
 }/*# sourceMappingURL=style.css.map */
